@@ -1,0 +1,94 @@
+{
+  "battles": [
+    {
+      "opponent": "Naruto Uzumaki",
+      "chapter": 139,
+      "volume": 15
+    },
+    {
+      "opponent": "Orochimaru",
+      "chapter": 151,
+      "volume": 16
+    },
+    {
+      "opponent": "Itachi Uchiha",
+      "chapter": "389-394",
+      "volume": 42
+    },
+    {
+      "opponent": "Deidara",
+      "chapter": "416-417",
+      "volume": 44
+    },
+    {
+      "opponent": "Orochimaru (Reanimated)",
+      "chapter": "430-431",
+      "volume": 45
+    },
+    {
+      "opponent": "Itachi Uchiha (Reanimated)",
+      "chapter": "441-442",
+      "volume": 46
+    },
+    {
+      "opponent": "Kabuto Yakushi",
+      "chapter": 443,
+      "volume": 46
+    },
+    {
+      "opponent": "Mū (Reanimated)",
+      "chapter": 445,
+      "volume": 46
+    },
+    {
+      "opponent": "Deidara (Reanimated)",
+      "chapter": 446,
+      "volume": 46
+    },
+    {
+      "opponent": "Orochimaru (Reanimated)",
+      "chapter": 447,
+      "volume": 46
+    },
+    {
+      "opponent": "Itachi Uchiha (Reanimated) and Nagato",
+      "chapter": "449-450",
+      "volume": 46
+    },
+    {
+      "opponent": "Danzō Shimura",
+      "chapter": "478-481",
+      "volume": 49
+    },
+    {
+      "opponent": "The Five Kage",
+      "chapter": "500-501",
+      "volume": 51
+    },
+    {
+      "opponent": "Killer Bē",
+      "chapter": "502-503",
+      "volume": 51
+    },
+    {
+      "opponent": "Raikage",
+      "chapter": 504,
+      "volume": 51
+    },
+    {
+      "opponent": "Madara Uchiha (Ten-Tails Jinchūriki)",
+      "chapter": "666-670, 699-700",
+      "volume": "68-70"
+    },
+    {
+      "opponent": "Kaguya Ōtsutsuki",
+      "chapter": "691-699",
+      "volume": "69-70"
+    },
+    {
+      "opponent": "Naruto Uzumaki",
+      "chapter": 700,
+      "volume": 70
+    }
+  ]
+}
