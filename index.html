@@ -2,133 +2,34 @@
 <html>
 <head>
     <title>Sasuke Uchiha's Battles</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0; 
-            padding: 10px; 
-            background-color: #1E1E1E; /* Dark Gray */
-            color: #D4D4D4; /* Light Gray */
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #282828; /* Darker Gray */
-        }
-        th, td {
-            border: 1px solid #444; /* Dark Gray */
-            padding: 8px;
-            text-align: left;
-            color: #D4D4D4; /* Light Gray */
-        }
-        th {
-            background-color: #383838; /* Slightly Lighter Gray */
-        }
-    </style>
-</head>
-<body>
-    <h1>Sasuke Uchiha's Battles</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Opponent</th>
-                <th>Chapter</th>
-                <th>Volume</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Naruto Uzumaki</td>
-                <td>139</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td>Orochimaru</td>
-                <td>151</td>
-                <td>16</td>
-            </tr>
-            <tr>
-                <td>Itachi Uchiha</td>
-                <td>389-394</td>
-                <td>42</td>
-            </tr>
-            <tr>
-                <td>Deidara</td>
-                <td>416-417</td>
-                <td>44</td>
-            </tr>
-            <tr>
-                <td>Orochimaru (Reanimated)</td>
-                <td>430-431</td>
-                <td>45</td>
-            </tr>
-            <tr>
-                <td>Itachi Uchiha (Reanimated)</td>
-                <td>441-442</td>
-                <td>46</td>
-            </tr>
-            <tr>
-                <td>Kabuto Yakushi</td>
-                <td>443</td>
-                <td>46</td>
-            </tr>
-            <tr>
-                <td>Mū (Reanimated)</td>
-                <td>445</td>
-                <td>46</td>
-            </tr>
-            <tr>
-                <td>Deidara (Reanimated)</td>
-                <td>446</td>
-                <td>46</td>
-            </tr>
-            <tr>
-                <td>Orochimaru (Reanimated)</td>
-                <td>447</td>
-                <td>46</td>
-            </tr>
-            <tr>
-                <td>Itachi Uchiha (Reanimated) and Nagato</td>
-                <td>449-450</td>
-                <td>46</td>
-            </tr>
-            <tr>
-                <td>Danzō Shimura</td>
-                <td>478-481</td>
-                <td>49</td>
-            </tr>
-            <tr>
-                <td>The Five Kage</td>
-                <td>500-501</td>
-                <td>51</td>
-            </tr>
-            <tr>
-                <td>Killer Bē</td>
-                <td>502-503</td>
-<td>51</td>
-            </tr>
-            <tr>
-                <td>Raikage</td>
-                <td>504</td>
-                <td>51</td>
-            </tr>
-            <tr>
-                <td>Madara Uchiha (Ten-Tails Jinchūriki)</td>
-                <td>666-670, 699-700</td>
-                <td>68-70</td>
-            </tr>
-            <tr>
-                <td>Kaguya Ōtsutsuki</td>
-                <td>691-699</td>
-                <td>69-70</td>
-            </tr>
-            <tr>
-                <td>Naruto Uzumaki</td>
-                <td>700</td>
-                <td>70</td>
-            </tr>
-        </tbody>
-    </table>
-</body>
+    </head>
+    <body>
+        <h1>Sasuke Uchiha's Battles</h1>
+        <table id="battlesTable">
+            <thead>
+                <tr>
+                    <th>Opponent</th>
+                    <th>Chapter</th>
+                    <th>Volume</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script>
+            fetch('battles.json') 
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.querySelector('#battlesTable tbody');
+                    data.battles.forEach(battle => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${battle.opponent}</td>
+                            <td>${battle.chapter}</td>
+                            <td>${battle.volume}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                });
+        </script>
+    </body>
 </html>
